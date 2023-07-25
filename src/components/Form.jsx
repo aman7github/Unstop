@@ -17,10 +17,10 @@ const Form = ({showForm,setShowForm}) => {
   
     const slideInAnimation = keyframes`
   from {
-    transform: translateY(100%);
+    transform: translateY(90%);
   }
   to {
-    transform: translateY(15%);
+    transform: translateY(25%);
   }  `
  
   const close=()=>{

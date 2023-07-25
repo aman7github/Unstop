@@ -1,9 +1,5 @@
 import { Box,Button,Center,Divider,Text,useD,DrawerBody,Drawer,
-   DrawerFooter,
-   DrawerHeader,
-   DrawerOverlay,
-   DrawerContent,
-   DrawerCloseButton} from '@chakra-ui/react'
+} from '@chakra-ui/react'
 import React from 'react'
 import { keyframes } from '@emotion/react';
 import MenuBar from '../components/MenuBar'
@@ -15,15 +11,6 @@ import {MdOutlineGroup,MdOutlineViewStream,MdOutlineLink,MdAdd} from "react-icon
 import Form from '../components/Form'
 
 
-import {BsFillBarChartFill,BsBatteryFull,BsBattery} from "react-icons/bs"
-import {MdWifi,MdOutlineNotes,MdOutlineLaptopMac} from "react-icons/md"
-import {AiOutlineSearch} from "react-icons/ai"
-import {IoIosFunnel} from "react-icons/io"
-import {RiBarChartFill} from "react-icons/ri"
-import { useDisclosure } from '@chakra-ui/react'
-
-
-import {GoClock} from "react-icons/go"
 
 const DestopLayout = () => {
 
@@ -32,34 +19,19 @@ const DestopLayout = () => {
      const handleShowForm = () => {
        setShowForm(true);
      };  
-     const { isOpen, onOpen, onClose } = useDisclosure()
-     const btnRef = React.useRef()
+ 
      
- 
- 
-     const slideInAnimation = keyframes`
-     from {
-       transform: translateY(100%);
-     }
-     to {
-       transform: translateY(15%);
-     }  `
-
  
 
   return (
      <>
     
-    
 
+    <Form showForm={showForm}  setShowForm={setShowForm}  />
    
-          
-       
-     
 
     <Box w={{lg:"1440px"}} h="1532px" bg={'#F6F8FA'} pos='relative'  display={{base:"none",sm:"flex"}} gap="10px"   >
       
-    <Form showForm={showForm}  setShowForm={setShowForm}  />
    
 
 
@@ -288,7 +260,7 @@ const DestopLayout = () => {
 
                                         {/* <-------------------------- 1st box inside lower box ---------------------------------> */}
 
-                                                 <Center onClick={setShowForm} cursor='pointer' w='388px' h='209px' border='1px dashed' borderRadius='12px' display='flex' flexDir='column'  gap='12px' p='30px' borderColor='#DADCE0' bg='#F6F8FA' >
+                                                 <Center onClick={handleShowForm} cursor='pointer' w='388px' h='209px' border='1px dashed' borderRadius='12px' display='flex' flexDir='column'  gap='12px' p='30px' borderColor='#DADCE0' bg='#F6F8FA' >
 
                                                       <Center w='150px' h='102px'  display='flex' flexDir='column'  gap='10px'  >
                                                               <Center w='70px' h='70px' borderRadius='72px' color='#0073e6' bg='white' >
